@@ -88,7 +88,7 @@ let scorePrompt;
 function scorerPrompt() {
 
    let scorePrompt = input.question('Which scoring algorithm would you like to use? \n\n 0 - Simple: One point per character \n 1 - Vowel Bonus: Vowels are worth 3 points \n 2 - Scrabble: Uses scrabble point system \nEnter 0, 1, or 2: ')
-   return scoringAlgorithms[scorePrompt].function(scrabbleQuestion)
+   return scoringAlgorithms[scorePrompt].scorerFunction(scrabbleQuestion)
 }
 
 function transform(oldPointStructure) {
